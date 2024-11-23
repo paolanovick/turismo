@@ -2,17 +2,14 @@
 
 import './App.css'
 
-function App() {
- 
+import Button from "react-bootstrap/Button";
 
+function OutlineTypesExample() {
   return (
     <>
-      <div>
-        
-      </div>
-    
+      <Button variant="outline-success">Success</Button>
     </>
-  )
+  );
 }
 
-export default App
+export default OutlineTypesExample;

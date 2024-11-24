@@ -6,7 +6,7 @@ const Button = ({ label, onClick }) => {
   return (
     <button
       style={{
-        backgroundColor: "red",
+        backgroundColor: "#007BFF",
         color: "#fff",
         border: "none",
         padding: "10px 15px",

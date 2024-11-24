@@ -1,15 +1,20 @@
+/* eslint-disable no-unused-vars */
+
+import React from "react";
+import NavBar from "./components/NavBar";
 
 
-import './App.css'
-
-import Button from "react-bootstrap/Button";
-
-function OutlineTypesExample() {
+function App() {
   return (
     <>
-      <Button variant="outline-success">Success</Button>
+      <div>
+        {/* Pasamos los elementos como props al NavBar */}
+        <NavBar nombre="TravelAr" botonLabel="Paquetes" carritoValor={5} />
+      </div>
+     
+     
     </>
   );
 }
 
-export default OutlineTypesExample;
+export default App;

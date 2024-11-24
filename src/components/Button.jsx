@@ -4,22 +4,23 @@ import React from "react";
 
 const Button = ({ label, onClick }) => {
   return (
-    <button style={styles.button} onClick={onClick}>
+    <button
+      style={{
+        backgroundColor: "red",
+        color: "#fff",
+        border: "none",
+        padding: "10px 15px",
+        borderRadius: "5px",
+        cursor: "pointer",
+        fontSize: "16px",
+      }}
+      onClick={onClick}
+    >
       {label}
     </button>
   );
 };
 
-const styles = {
-  button: {
-    backgroundColor: "#007BFF",
-    color: "#fff",
-    border: "none",
-    padding: "10px 15px",
-    borderRadius: "5px",
-    cursor: "pointer",
-    fontSize: "16px",
-  },
-};
+
 
 export default Button;

@@ -2,17 +2,21 @@
 
 import React from "react";
 import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 
 function App() {
   return (
     <>
       <div>
-        {/* Pasamos los elementos como props al NavBar */}
         <NavBar nombre="TravelAr" botonLabel="Paquetes" carritoValor={5} />
+        <h1>Paises del mundo</h1>
+        {/* Incluimos el ItemListContainer */}
+        <ItemListContainer />
       </div>
-     
-     
     </>
   );
 }

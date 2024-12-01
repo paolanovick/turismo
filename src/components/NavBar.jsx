@@ -32,4 +32,5 @@ const NavBar = ({ nombre, botonLabel, carritoValor }) => {
 
 
 
+
 export default NavBar;

@@ -1,12 +1,25 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable no-unused-vars */
 
 /* eslint-disable react/prop-types */
-
+import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "./Button";
+import withLoading from "../hoc/withLoading.jsx";
 
 const ItemList = ({ countries }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    // Simulamos una llamada a una API
+    setTimeout(() => {
+      setItems(countries); // Usamos los datos pasados como prop
+      setIsLoading(false); // Después de 3 segundos, dejamos de cargar
+    }, 3000);
+  }, [countries]);
   return (
     <div>
       <Row className="g-2">
@@ -29,10 +42,7 @@ const ItemList = ({ countries }) => {
                   <strong>Subregion:</strong> {country.subregion}
                   <br />
                 </Card.Text>
-                <Button
-                  label="Ver mas"
-                  onClick={() =>  country }
-                />
+                <Button label="Ver mas" onClick={() => country} />
               </Card.Body>
             </Card>
           </Col>
@@ -42,4 +52,4 @@ const ItemList = ({ countries }) => {
   );
 };
 
-export default ItemList;
+export default withLoading(ItemList);

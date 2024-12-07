@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList"; // Asegúrate de que el componente ItemList esté importado correctamente
-
-
+import ItemList from "./ItemList";
+import withLoading from "../hoc/withLoading.jsx"; // Asegúrate de que el componente ItemList esté importado correctamente
 
 const ItemListContainer = () => {
   const [countries, setCountries] = useState([]);

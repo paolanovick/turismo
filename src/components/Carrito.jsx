@@ -4,7 +4,7 @@ import React from "react";
 
 const Carrito = ({ valor }) => {
   return (
-    <cart
+    <div
       style={{
         display: "flex",
         alignItems: "center",
@@ -12,10 +12,9 @@ const Carrito = ({ valor }) => {
         fontWeight: "bold",
       }}
     >
-      🛒 <valor style={{ marginLeft: "5px", color: "#007BFF" }}>{valor}</valor>
-    </cart>
+      🛒 <span style={{ marginLeft: "5px", color: "#007BFF" }}>{valor}</span>
+    </div>
   );
 };
-
 
 export default Carrito;

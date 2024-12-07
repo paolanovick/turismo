@@ -14,7 +14,7 @@ function App() {
       <div>
         <NavBar nombre="TravelAr" botonLabel="Paquetes" carritoValor={5} />
         <h1>Paises del mundo</h1>
-        {/* Incluimos el ItemListContainer */}
+      
         <ItemListContainer />
       </div>
     </>
